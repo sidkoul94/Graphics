@@ -47,6 +47,10 @@ float deltaAngley = 0.0f;
 float deltaMove = 0;
 float deltaMoveConstant = 0.5f;
 float distance = 0.0f;
+
+// defines the speed of the camera at the Z vertice from the source of origin for display1() renderer
+float deltaDiff = 0.05f;
+
 int xOrigin = -1;
 int yOrigin = -1;
 
@@ -708,8 +712,9 @@ void display1(void){
 	
 	//glutSwapBuffers();
 	
+	
 	if(idelta < 10.0f) 
-	    idelta += 0.005f ;
+	    idelta += deltaDiff ;
 	
 	
 	   
